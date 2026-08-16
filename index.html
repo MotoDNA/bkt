@@ -6,12 +6,18 @@
 <meta name="robots" content="noindex, nofollow">
 <title>BKT — 일산 제본 · 노트 전문 제작</title>
 <meta name="description" content="일산 제본 전문 BKT. T/W다이어리, 스프링노트, 탁상캘린더, 무선제본. 경기 고양시 일산동구 장항로.">
+<meta name="theme-color" content="#0E2440">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+<!--
+THESIS: 이 업종의 표준 배치 — 신뢰형 히어로, 실적 수치, 품목 그리드, 절차, 문의 폼 — 을 빈정거림 없이 그대로 따르되, 국내 인쇄·제작 서비스 사이트들의 마감 수준을 넘어서 실행한다. 방문자의 기대를 배신하지 않는 것이 이 페이지의 전략이다.
+OWN-WORLD: 남색 #0E2440 기업 신뢰형. 흰 지면, 남색 판, 파랑 #1E7ACB 행동색. 프리텐다드 단일 서체. 정돈된 그리드와 얇은 경계선. 사진이 없으므로 그 자리는 직접 그린 제본 단면 도해가 맡는다.
+STORY: 발주 담당자가 첫 화면에서 무슨 회사인지 알고, 품목에서 자기 물건을 찾고, 절차에서 안심하고, 전화를 건다.
+FIRST VIEWPORT: 남색 판 위 표제 2줄과 설명, 전화·견적 두 버튼, 그 아래 실적 수치 3개. 상단 고정 바에 전화 버튼 상주.
+FORM: 카테고리 표준(canon). 사용자가 결정 화면에서 표준을 의도적으로 선택. 기준선 = 국내 인쇄·제작 서비스. seed d2cabdd9.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+-->
 
 <!-- ═══════════════════════════════════════════════════════════
      ▼▼▼ 여기만 고치면 홈페이지 전체가 바뀝니다 ▼▼▼
@@ -20,11 +26,11 @@
 <script>
 const SITE = {
 
-  showPhotos : false,   // 사진을 받으면 true 로 바꾸세요 (작업사례 구역이 나타납니다)
+  showPhotos : false,   // 사진 파일을 works.items 의 img 에 넣으면 자동으로 구역이 나타납니다
 
   /* ── 1. 회사 기본 정보 ────────────────────────────── */
   brand      : "BKT",
-  brandEn    : "BINDING WORKS",
+  brandKo    : "비케이티",
   tagline    : "일산 제본 · 노트 전문 제작",
   phone      : "0507-1324-6102",     // ●안심번호입니다. 실제 공장 번호로 교체
   phoneLabel : "0507-1324-6102",
@@ -34,42 +40,40 @@ const SITE = {
 
   /* ── 2. 첫 화면 ───────────────────────────────────── */
   hero: {
-    eyebrow : "경기 고양 · 일산동구 장항동",
-    line1   : "다이어리 · 노트 · 캘린더 · 문제집",
-    line2   : "제본 전문 기업 BKT",
-    sub     : "T/W(트윈링) 제본부터 무선제본까지, 자체 설비를 갖춘 일산 공장에서 직접 작업합니다. 인쇄물만 보내주시면 제본은 저희가 맡습니다.",
+    title   : "제본 전문 기업 BKT",
+    sub     : "다이어리 · 노트 · 캘린더 · 문제집 — T/W(트윈링) 제본부터 무선제본까지, 자체 설비를 갖춘 일산 공장에서 직접 작업합니다. 인쇄물만 보내주시면 제본은 저희가 맡습니다.",
     stats   : [
-      { n:"42", unit:"년",  label:"제본 경력" },        // ●2020년 기준 · 현재 수치 확인
-      { n:"6",  unit:"종",  label:"제본 방식 대응" },
+      { n:"42",   unit:"년",   label:"2대 합산 제본 경력" },
+      { n:"6",    unit:"종",   label:"제본 방식 대응" },
       { n:"자체", unit:"설비", label:"일산 공장 직영" }
     ]
   },
 
-  /* ── 3. 회사 소개 ─────────────────────────────────── */
-  about: {
-    title : "제본 한 가지로 42년",
-    body  : [
-      "BKT는 다이어리 제조로 이름난 양지사에서 25년간 근무한 대표가 창업한 제본 전문 기업입니다. 업계 경력 33년, 지금도 매일 일산 공장에서 직접 작업을 관리합니다.",
-      "현재는 2대가 함께 운영하며, 다이어리·노트·캘린더·문제집 등 인쇄물의 제본을 전담하고 있습니다. 접수부터 출고까지 전 공정을 자체 설비로 처리합니다."
-    ],
-    points: [
-      { n:"01", k:"자체 설비 보유",     v:"외주로 넘기지 않습니다. 접수부터 출고까지 일산 공장 안에서 마무리합니다." },
-      { n:"02", k:"제본 방식 전 대응",  v:"T/W제본, 링제본, 떡제본, 무선제본, 특수제본까지 한 곳에서 처리합니다." },
-      { n:"03", k:"성수기 납기 준수",   v:"연말 다이어리·캘린더 시즌에도 약속한 일정에 맞춰 출고합니다." }
-    ]
-  },
-
-  /* ── 4. 취급 품목 ─────────────────────────────────── */
+  /* ── 3. 취급 품목 ─────────────────────────────────── */
   services: {
     title : "취급 품목",
     lead  : "어떤 제본 방식이 적합할지 모르셔도 괜찮습니다. 인쇄물 사양을 알려주시면 상담해 드립니다.",
     items : [
-      { name:"T/W 다이어리",       desc:"이중 와이어 제본. 360도로 펼쳐지고 마감이 깔끔해 다이어리에 가장 많이 사용합니다." },
+      { name:"T/W 다이어리",        desc:"이중 와이어 제본. 360도로 펼쳐지고 마감이 깔끔해 다이어리에 가장 많이 사용합니다." },
       { name:"T/W 노트 · 스프링노트", desc:"판촉물, 학원 교재, 브랜드 굿즈용 노트. 표지 인쇄부터 제본까지 진행합니다." },
       { name:"탁상 카렌다 · 캘린더",  desc:"탁상용·벽걸이용 모두 가능. 걸이 부착 등 마감 작업까지 처리합니다." },
-      { name:"무선제본 · 문제집",    desc:"접착 방식 제본. 학원 교재, 문제집, 단행본 등 페이지가 많은 인쇄물에 적합합니다." },
-      { name:"링제본 · 떡제본",      desc:"보고서, 발표자료, 메모패드 등. 소량·단납기 건도 상담해 주세요." },
-      { name:"특수제본",           desc:"비규격 사이즈, 특수 표지, 별도 후가공이 필요한 작업을 상담합니다." }
+      { name:"무선제본 · 문제집",     desc:"접착 방식 제본. 학원 교재, 문제집, 단행본 등 페이지가 많은 인쇄물에 적합합니다." },
+      { name:"링제본 · 떡제본",       desc:"보고서, 발표자료, 메모패드 등. 소량·단납기 건도 상담해 주세요." },
+      { name:"특수제본",             desc:"비규격 사이즈, 특수 표지, 별도 후가공이 필요한 작업을 상담합니다." }
+    ]
+  },
+
+  /* ── 4. 회사 소개 ─────────────────────────────────── */
+  about: {
+    title : "2대가 이어온 제본 42년",
+    body  : [
+      "BKT는 다이어리 제조로 이름난 양지사에서 25년간 근무한 대표가 창업한 제본 전문 기업입니다. 대표의 업계 경력은 33년, 지금도 매일 일산 공장에서 직접 작업을 관리합니다.",
+      "지금은 아들인 실장이 함께 운영합니다. 실장의 경력 9년을 더해 두 사람의 제본 경력은 합쳐 42년입니다. 다이어리·노트·캘린더·문제집 등 인쇄물의 제본을 전담하며, 접수부터 출고까지 전 공정을 자체 설비로 처리합니다."
+    ],
+    points: [
+      { k:"자체 설비 보유",    v:"외주로 넘기지 않습니다. 접수부터 출고까지 일산 공장 안에서 마무리합니다." },
+      { k:"제본 방식 전 대응", v:"T/W제본, 링제본, 떡제본, 무선제본, 특수제본까지 한 곳에서 처리합니다." },
+      { k:"성수기 납기 준수",  v:"연말 다이어리·캘린더 시즌에도 약속한 일정에 맞춰 출고합니다." }
     ]
   },
 
@@ -78,15 +82,15 @@ const SITE = {
     title : "진행 절차",
     lead  : "문의부터 출고까지 이렇게 진행됩니다.",
     steps : [
-      { k:"문의 · 견적",  v:"제본 방식, 수량, 납기를 알려주시면 견적을 산출해 회신합니다." },
-      { k:"사양 확정",   v:"표지 재질, 스프링 색상, 후가공 여부를 확정합니다. 필요 시 샘플로 확인합니다." },
-      { k:"인쇄물 입고",  v:"인쇄된 내지와 표지를 공장으로 보내주시면 수량과 상태를 확인합니다." },
-      { k:"제본 작업",   v:"확정된 사양대로 자체 설비에서 제본합니다." },
-      { k:"검수 · 출고",  v:"불량 여부를 확인한 뒤 포장해 출고합니다." }
+      { k:"문의 · 견적", v:"제본 방식, 수량, 납기를 알려주시면 견적을 산출해 회신합니다." },
+      { k:"사양 확정",  v:"표지 재질, 스프링 색상, 후가공 여부를 확정합니다. 필요 시 샘플로 확인합니다." },
+      { k:"인쇄물 입고", v:"인쇄된 내지와 표지를 공장으로 보내주시면 수량과 상태를 확인합니다." },
+      { k:"제본 작업",  v:"확정된 사양대로 자체 설비에서 제본합니다." },
+      { k:"검수 · 출고", v:"불량 여부를 확인한 뒤 포장해 출고합니다." }
     ]
   },
 
-  /* ── 6. 작업 사례 (사진 받으면 showPhotos: true) ──── */
+  /* ── 6. 작업 사례 (img 를 채우면 자동으로 나타납니다) ── */
   works: {
     title : "작업 사례",
     lead  : "최근 진행한 작업입니다.",
@@ -106,7 +110,6 @@ const SITE = {
     naverUrl : "https://map.naver.com/",   // ●네이버지도 '비케이티' 링크로 교체
     kakaoUrl : "https://map.kakao.com/",   // ●카카오맵 링크로 교체
     guide    : [
-      { k:"주소",   v:"경기 고양시 일산동구 장항로 121-18" },
       { k:"주차",   v:"무료 주차 가능" },
       { k:"자가용", v:"내비게이션에 '비케이티' 또는 위 주소 검색" }
     ]
@@ -124,7 +127,7 @@ const SITE = {
     ceo     : "●신○○",
     bizNo   : "●000-00-00000",
     addr    : "경기 고양시 일산동구 장항로 121-18",
-    tel     : "●실제 공장 번호",
+    tel     : "0507-1324-6102",        // ●안심번호. 실제 공장 번호로 교체
     email   : "●bkt@example.com"
   }
 };
@@ -135,312 +138,424 @@ const SITE = {
 
 <style>
 :root{
-  --navy:#0E2440;        /* 주색 */
+  --navy:#0E2440;
   --navy-2:#17365C;
-  --navy-3:#20456F;
-  --blue:#1E7ACB;        /* 강조 */
-  --ink:#1A1F26;
-  --ink-2:#5B6572;
+  --navy-3:#0A1B31;
+  --blue:#1E7ACB;
+  --blue-d:#1663A8;
+  --ink:#16202B;
+  --ink-2:#54606E;
+  --ink-3:#66727F;
   --bg:#FFFFFF;
-  --bg-2:#F4F6F9;        /* 옅은 회색 구역 */
-  --line:#DDE3EA;
-  --maxw:1140px;
-  --sans:"Pretendard Variable",Pretendard,-apple-system,system-ui,sans-serif;
-  --mono:"IBM Plex Mono",ui-monospace,monospace;
+  --bg-2:#F4F7FA;
+  --bg-3:#EAF0F6;
+  --line:#DCE3EB;
+  --line-2:#EDF1F6;
+  --spot:#C0392B;
+  --on-navy:#DCE6F2;
+  --on-navy-2:#9DB0C7;
+  --maxw:1180px;
+  --sans:"Pretendard Variable",Pretendard,-apple-system,system-ui,"Apple SD Gothic Neo",sans-serif;
+  --sh-1:0 1px 2px rgba(14,36,64,.06),0 4px 12px rgba(14,36,64,.06);
+  --sh-2:0 2px 4px rgba(14,36,64,.07),0 12px 28px rgba(14,36,64,.10);
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:70px}
+html{scroll-behavior:smooth;scroll-padding-top:82px;-webkit-text-size-adjust:100%}
 body{font-family:var(--sans);background:var(--bg);color:var(--ink);
-  font-size:17px;line-height:1.75;letter-spacing:-.012em;
-  -webkit-font-smoothing:antialiased;word-break:keep-all}
+  font-size:17px;line-height:1.76;letter-spacing:-.012em;
+  font-feature-settings:"tnum" 1;
+  -webkit-font-smoothing:antialiased;word-break:keep-all;
+  text-underline-offset:.2em;text-decoration-thickness:from-font}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
-:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:3px}
-@media (prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
+button,input,select,textarea{font:inherit;color:inherit}
+svg{display:block}
 
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
-.eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--blue);font-weight:600}
-h2.sec-t{font-size:clamp(25px,4.2vw,37px);font-weight:800;letter-spacing:-.04em;line-height:1.28;margin:12px 0 12px}
-.sec-lead{color:var(--ink-2);max-width:60ch;font-size:16.5px}
-section{padding:84px 0}
-.gray{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-@media(max-width:640px){section{padding:56px 0}}
+::selection{background:var(--blue);color:#fff}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px;border-radius:2px}
+*{scrollbar-color:#C3CEDA var(--bg-2)}
+::-webkit-scrollbar{width:12px;height:12px}
+::-webkit-scrollbar-track{background:var(--bg-2)}
+::-webkit-scrollbar-thumb{background:#C3CEDA;border:3px solid var(--bg-2);border-radius:8px}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+section{padding:104px 0}
+.tinted{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+h1,h2,h3{letter-spacing:-.042em;line-height:1.26;font-weight:800}
+.s-head{max-width:52ch}
+.s-head h2{font-size:clamp(27px,3.7vw,42px)}
+.s-head p{color:var(--ink-2);font-size:17.5px;margin-top:16px;max-width:48ch}
+@media(max-width:820px){section{padding:66px 0}}
+
+/* 버튼 */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  min-height:56px;padding:0 30px;font-weight:700;font-size:17px;border:0;cursor:pointer;
+  border-radius:4px;transition:background .17s,box-shadow .17s,transform .17s}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-p{background:var(--blue);color:#fff;box-shadow:var(--sh-1)}
+.btn-p:hover{background:var(--blue-d);box-shadow:var(--sh-2);transform:translateY(-1px)}
+.btn-g{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.42)}
+.btn-g:hover{background:rgba(255,255,255,.1);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.75)}
+.btn-o{background:#fff;color:var(--navy);box-shadow:inset 0 0 0 1.5px var(--line)}
+.btn-o:hover{box-shadow:inset 0 0 0 1.5px var(--navy);background:var(--bg-2)}
 
 /* 시안 안내 띠 */
-.demo{position:relative;z-index:70;background:#232A33;color:#DCE3EC;font-size:13px;
-  line-height:1.5;padding:9px 46px 9px 18px;text-align:center;letter-spacing:-.01em}
+.demo{background:var(--navy-3);color:var(--on-navy);font-size:13.5px;line-height:1.55;position:relative;z-index:70}
+.demo .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px}
 .demo b{color:#fff;font-weight:700}
-.demo button{position:absolute;right:8px;top:50%;transform:translateY(-50%);background:none;border:0;
-  color:#98A4B4;font-size:20px;cursor:pointer;padding:4px 9px;line-height:1;font-family:inherit}
+.demo button{flex:none;display:flex;align-items:center;gap:6px;background:none;border:0;cursor:pointer;
+  color:var(--on-navy-2);font-size:13.5px;font-weight:600;min-height:44px;padding:0 4px}
+.demo button:hover{color:#fff}
+.demo button svg{width:13px;height:13px}
 .demo.hide{display:none}
-@media(max-width:640px){.demo{font-size:12px;padding:8px 42px 8px 14px}}
 
 /* 상단 바 */
-header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.95);
-  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.hd{display:flex;align-items:center;justify-content:space-between;height:66px}
+header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.93);
+  backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;justify-content:space-between;height:74px;gap:22px}
 .logo{display:flex;align-items:baseline;gap:9px}
-.logo b{font-size:25px;font-weight:900;letter-spacing:.01em;color:var(--navy)}
-.logo span{font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;color:var(--ink-2)}
-nav.desk{display:flex;gap:27px;font-size:15px;font-weight:600}
-nav.desk a{padding:6px 0;border-bottom:2px solid transparent;transition:.15s}
-nav.desk a:hover,nav.desk a.on{border-color:var(--blue);color:var(--navy)}
-.hd-call{background:var(--navy);color:#fff;padding:11px 20px;border-radius:6px;font-weight:700;font-size:14.5px}
+.logo b{font-size:26px;font-weight:900;letter-spacing:-.02em;color:var(--navy)}
+.logo span{font-size:13px;font-weight:600;color:var(--ink-3);letter-spacing:.06em}
+nav.desk{display:flex;gap:4px;font-size:16px;font-weight:600}
+nav.desk a{padding:10px 15px;border-radius:4px;color:var(--ink-2);transition:.15s;position:relative}
+nav.desk a:hover{color:var(--navy);background:var(--bg-2)}
+nav.desk a.on{color:var(--navy)}
+nav.desk a.on::after{content:"";position:absolute;left:15px;right:15px;bottom:2px;height:2px;background:var(--blue);border-radius:2px}
+.hd-call{display:flex;align-items:center;gap:8px;background:var(--navy);color:#fff;height:46px;padding:0 20px;
+  border-radius:4px;font-weight:700;font-size:15.5px;transition:background .17s}
 .hd-call:hover{background:var(--navy-2)}
-.burger{display:none;width:42px;height:42px;border:1px solid var(--line);border-radius:7px;background:none;
-  cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:4px}
-.burger i{width:17px;height:1.8px;background:var(--navy);display:block}
-@media(max-width:900px){nav.desk,.hd-call{display:none}.burger{display:flex}}
+.hd-call svg{width:17px;height:17px}
+.burger{display:none;width:46px;height:46px;border:1px solid var(--line);border-radius:5px;background:#fff;
+  cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:4.5px}
+.burger i{width:18px;height:1.8px;background:var(--navy);display:block;border-radius:2px}
+@media(max-width:980px){nav.desk,.hd-call{display:none}.burger{display:flex}.hd{height:66px}}
 
-.drawer{position:fixed;inset:0;z-index:90;background:#fff;display:none;flex-direction:column;padding:22px}
+.drawer{position:fixed;inset:0;z-index:90;background:#fff;display:none;flex-direction:column;padding:18px 22px 26px}
 .drawer.open{display:flex}
-.drawer .x{align-self:flex-end;font-size:30px;background:none;border:0;cursor:pointer;line-height:1;color:var(--navy)}
-.drawer a{font-size:24px;font-weight:800;padding:17px 0;border-bottom:1px solid var(--line);
-  letter-spacing:-.03em;color:var(--navy)}
+.drawer .dh{display:flex;align-items:center;justify-content:space-between}
+.drawer .x{width:46px;height:46px;border:1px solid var(--line);border-radius:5px;background:none;cursor:pointer;
+  display:flex;align-items:center;justify-content:center}
+.drawer .x svg{width:15px;height:15px;color:var(--navy)}
+.drawer nav{margin-top:22px;border-top:1px solid var(--line-2);overflow:auto}
+.drawer nav a{display:block;font-size:20px;font-weight:700;padding:19px 2px;border-bottom:1px solid var(--line-2);
+  letter-spacing:-.035em;color:var(--navy)}
+.drawer .dcall{margin-top:auto;padding-top:22px}
+.drawer .dcall .btn{width:100%}
 
-/* 히어로 */
-.hero{background:var(--navy);color:#fff;padding:92px 0 0;position:relative;overflow:hidden}
-.hero::after{content:"";position:absolute;right:-140px;top:-140px;width:520px;height:520px;
-  border:1px solid rgba(255,255,255,.09);border-radius:50%}
-.hero::before{content:"";position:absolute;right:-40px;top:-40px;width:320px;height:320px;
-  border:1px solid rgba(255,255,255,.07);border-radius:50%}
-.hero .wrap{position:relative;z-index:2}
-.hero .eyebrow{color:#7FB6E8}
-.hero h1{font-size:clamp(31px,5.6vw,56px);font-weight:900;letter-spacing:-.045em;
-  line-height:1.18;margin:16px 0 20px}
-.hero h1 span{display:block;color:#8FC2EE}
-.hero p.lead{font-size:17.5px;color:#C3CEDC;max-width:52ch}
-.hero-cta{display:flex;gap:11px;flex-wrap:wrap;margin-top:32px}
-.btn{padding:15px 27px;border-radius:6px;font-weight:700;font-size:16px;border:1.6px solid transparent;
-  cursor:pointer;transition:.15s;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:inherit}
-.btn-1{background:var(--blue);color:#fff}
-.btn-1:hover{background:#1868AE}
-.btn-2{border-color:rgba(255,255,255,.45);color:#fff;background:none}
-.btn-2:hover{background:rgba(255,255,255,.1)}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);margin-top:64px;
-  border-top:1px solid rgba(255,255,255,.16)}
-.stats div{padding:26px 4px 34px;border-right:1px solid rgba(255,255,255,.16)}
-.stats div:last-child{border-right:0}
-.stats b{font-size:clamp(26px,4.4vw,40px);font-weight:900;letter-spacing:-.045em;color:#fff;line-height:1;display:block}
-.stats b i{font-style:normal;font-size:.46em;font-weight:600;margin-left:3px;color:#8FC2EE}
-.stats span{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:#96A7BC;margin-top:11px}
-@media(max-width:640px){.hero{padding-top:60px}.stats div{padding:20px 4px 24px}}
+/* 첫 화면 */
+.hero{position:relative;background:var(--navy);color:#fff;overflow:hidden;isolation:isolate;padding:0}
+.hero .bgart{position:absolute;right:-6%;top:50%;transform:translateY(-50%);width:min(620px,58%);
+  color:#fff;opacity:.075;z-index:-1;pointer-events:none}
+.hero .wrap{padding-top:clamp(64px,8vw,104px);padding-bottom:clamp(56px,6vw,84px)}
+.hero h1{font-size:clamp(34px,5.8vw,62px);letter-spacing:-.05em;line-height:1.2;max-width:16ch}
+.hero p.sub{margin-top:24px;max-width:48ch;font-size:18px;color:var(--on-navy);line-height:1.8}
+.hero .cta{display:flex;gap:12px;margin-top:38px;flex-wrap:wrap}
+.stats{display:grid;grid-template-columns:repeat(3,auto);gap:clamp(28px,6vw,80px);justify-content:start;
+  margin-top:clamp(48px,6vw,72px);padding-top:34px;border-top:1px solid rgba(255,255,255,.18)}
+.stats b{display:block;font-size:clamp(31px,4.4vw,46px);font-weight:800;letter-spacing:-.05em;line-height:1.1}
+.stats b.word{font-size:clamp(24px,3vw,31px);line-height:1.5}
+.stats b.word i{font-size:.78em;margin-left:5px}
+.stats b i{font-style:normal;font-size:.48em;font-weight:700;margin-left:4px;color:var(--on-navy)}
+.stats span{display:block;margin-top:7px;font-size:14.5px;color:var(--on-navy-2);font-weight:500}
+@media(max-width:820px){
+  .hero .bgart{right:-34%;bottom:-14%;top:auto;transform:none;width:105%;opacity:.055}
+  .hero .cta .btn{flex:1 1 100%}
+  .stats{grid-template-columns:1fr 1fr;gap:26px 20px}
+}
 
-/* 소개 */
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-top:28px}
-@media(max-width:900px){.about-grid{grid-template-columns:1fr;gap:32px}}
-.about-grid p+p{margin-top:15px}
-.points{display:flex;flex-direction:column;gap:14px}
-.points div{background:#fff;border:1px solid var(--line);border-left:3px solid var(--blue);
-  border-radius:5px;padding:20px 22px}
-.points em{font-style:normal;font-family:var(--mono);font-size:11px;color:var(--blue);letter-spacing:.1em;font-weight:600}
-.points b{display:block;font-size:17.5px;font-weight:800;letter-spacing:-.025em;margin:5px 0 4px;color:var(--navy)}
-.points span{display:block;color:var(--ink-2);font-size:15.5px;line-height:1.68}
+/* 취급 품목 */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:52px}
+.svc article{background:#fff;border:1px solid var(--line);border-radius:6px;padding:28px 26px 30px;
+  transition:border-color .18s,box-shadow .18s,transform .18s}
+.svc article:hover{border-color:#BFD3E6;box-shadow:var(--sh-2);transform:translateY(-2px)}
+.svc .dia{height:92px;color:var(--navy);margin-bottom:22px}
+.svc .dia svg{height:100%;width:auto}
+.svc h3{font-size:20px;letter-spacing:-.04em}
+.svc p{margin-top:10px;color:var(--ink-2);font-size:16px;line-height:1.72}
+@media(max-width:980px){.svc{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.svc{grid-template-columns:1fr;gap:14px}.svc .dia{height:76px;margin-bottom:16px}}
 
-/* 품목 */
-.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:1px;
-  background:var(--line);border:1px solid var(--line);margin-top:36px}
-.svc article{background:#fff;padding:28px 26px 30px;transition:.18s}
-.svc article:hover{background:#FAFCFE}
-.svc .no{font-family:var(--mono);font-size:11px;color:var(--blue);letter-spacing:.12em;font-weight:600}
-.svc h3{font-size:20px;font-weight:800;letter-spacing:-.03em;margin:10px 0 9px;color:var(--navy)}
-.svc p{font-size:15.5px;color:var(--ink-2);line-height:1.68}
+/* 회사 소개 */
+.ab{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(36px,6vw,84px);align-items:start}
+.ab-body p{color:var(--ink-2);font-size:17.5px;max-width:44ch}
+.ab-body p+p{margin-top:1.15em}
+.pts{display:grid;gap:14px}
+.pts div{background:#fff;border:1px solid var(--line);border-radius:6px;padding:22px 24px}
+.pts b{display:flex;align-items:center;gap:10px;font-size:17.5px;font-weight:700;letter-spacing:-.03em}
+.pts b svg{width:20px;height:20px;color:var(--blue);flex:none}
+.pts span{display:block;margin-top:8px;color:var(--ink-2);font-size:16px;line-height:1.7}
+@media(max-width:900px){.ab{grid-template-columns:1fr;gap:38px}}
 
 /* 진행 절차 */
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;margin-top:36px}
-.stp{background:#fff;border:1px solid var(--line);border-radius:6px;padding:24px 20px;position:relative}
-.stp .n{font-family:var(--mono);font-size:34px;font-weight:600;color:#D7E3F0;line-height:1;letter-spacing:-.03em}
-.stp b{display:block;font-size:16.5px;font-weight:800;color:var(--navy);margin:12px 0 7px;letter-spacing:-.025em}
-.stp span{display:block;font-size:14.5px;color:var(--ink-2);line-height:1.62}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);column-gap:44px;margin-top:52px;
+  border-top:2px solid var(--navy)}
+.steps .st{padding:26px 0 30px;position:relative}
+.steps .st+.st::before{content:"";position:absolute;left:-22px;top:0;bottom:0;width:1px;background:var(--line)}
+.steps .n{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;
+  background:var(--navy);color:#fff;font-size:14.5px;font-weight:700;border-radius:50%;margin-bottom:16px}
+.steps b{display:block;font-size:17.5px;font-weight:700;letter-spacing:-.035em}
+.steps span{display:block;margin-top:9px;color:var(--ink-2);font-size:15.5px;line-height:1.68}
+@media(max-width:980px){
+  .steps{grid-template-columns:1fr;column-gap:0;border-top:0}
+  .steps .st{border-top:1px solid var(--line);padding:22px 0 24px 56px}
+  .steps .st+.st::before{display:none}
+  .steps .n{position:absolute;left:0;top:22px;margin:0}
+}
 
 /* 작업 사례 */
-.works{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:36px}
-.works figure{border-radius:6px;overflow:hidden;background:#fff;border:1px solid var(--line)}
-.works figure img{aspect-ratio:4/3;object-fit:cover;width:100%}
-.ph{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;background:#EEF2F7;
-  font-family:var(--mono);font-size:10.5px;color:#A9B6C6;letter-spacing:.12em}
-.works figcaption{padding:14px 16px}
-.works figcaption b{display:block;font-weight:700;font-size:15.5px;letter-spacing:-.02em;color:var(--navy)}
-.works figcaption span{font-family:var(--mono);font-size:10.5px;color:var(--ink-2)}
-.more{display:inline-flex;align-items:center;gap:7px;margin-top:26px;font-weight:700;color:var(--blue)}
+.works{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}
+.works figure{border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#fff}
+.works img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.works figcaption{padding:15px 18px;display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.works b{font-size:16px;font-weight:700}
+.works span{font-size:13.5px;color:var(--ink-3)}
+.more{display:inline-flex;align-items:center;gap:8px;margin-top:30px;font-weight:700;color:var(--blue)}
+.more svg{width:16px;height:16px}
+.more:hover{color:var(--blue-d);text-decoration:underline}
+@media(max-width:900px){.works{grid-template-columns:1fr 1fr}}
 
 /* 오시는 길 */
-.map-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:30px;align-items:start}
-@media(max-width:900px){.map-grid{grid-template-columns:1fr}}
-.map-box{aspect-ratio:16/11;border-radius:6px;border:1px solid var(--line);background:#fff;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:13px;text-align:center;padding:24px}
-.map-box .pin{font-size:30px}
-.map-box p{font-weight:700;font-size:16.5px;color:var(--navy)}
-.map-box small{font-family:var(--mono);font-size:10.5px;color:var(--ink-2)}
-.map-links{display:flex;gap:10px;margin-top:4px;flex-wrap:wrap;justify-content:center}
-.map-links a{padding:10px 18px;border-radius:6px;border:1.6px solid var(--navy);font-weight:700;font-size:14px;color:var(--navy)}
-.map-links a:hover{background:var(--navy);color:#fff}
-.info-tbl{width:100%;border-collapse:collapse}
-.info-tbl th,.info-tbl td{text-align:left;padding:16px 0;border-bottom:1px solid var(--line);vertical-align:top;font-size:16px}
-.info-tbl th{width:92px;font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--blue);
-  font-weight:600;padding-top:19px}
+.loc{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,56px);margin-top:48px;align-items:stretch}
+.addr{background:#fff;border:1px solid var(--line);border-radius:6px;padding:34px;
+  display:flex;flex-direction:column}
+.addr .lb{font-size:14px;font-weight:700;color:var(--blue);letter-spacing:.02em}
+.addr .a{margin-top:12px;font-size:clamp(20px,2.4vw,25px);font-weight:800;letter-spacing:-.04em;line-height:1.42}
+.addr .links{display:flex;gap:10px;margin-top:auto;padding-top:30px;flex-wrap:wrap}
+.addr .links .btn{flex:1;min-width:150px}
+.tbl{width:100%;border-collapse:collapse;border-top:1px solid var(--line)}
+.tbl th,.tbl td{text-align:left;padding:17px 4px;border-bottom:1px solid var(--line);font-size:16.5px;vertical-align:top}
+.tbl th{width:104px;color:var(--ink-2);font-weight:600}
+.tbl td{font-weight:600}
+@media(max-width:820px){.loc{grid-template-columns:1fr}.addr{padding:26px}}
 
-/* 문의 */
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px}
-.form-grid .full{grid-column:1/-1}
-@media(max-width:640px){.form-grid{grid-template-columns:1fr}}
-label{display:block;font-weight:700;font-size:14px;margin-bottom:7px}
-input,select,textarea{width:100%;padding:14px 16px;border:1.6px solid var(--line);border-radius:6px;
-  font-family:inherit;font-size:16px;background:#fff;color:var(--ink)}
-input:focus,select:focus,textarea:focus{border-color:var(--blue)}
-textarea{min-height:130px;resize:vertical}
-.agree{display:flex;gap:11px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:6px;padding:16px}
-.agree input{width:20px;height:20px;flex:0 0 20px;margin-top:3px;accent-color:var(--blue)}
-.agree p{font-size:14.5px;color:var(--ink-2);line-height:1.65}
-.agree a{text-decoration:underline;font-weight:700;color:var(--blue)}
-.sent{background:var(--navy);color:#fff;padding:16px;border-radius:6px;font-weight:700;text-align:center;display:none}
-.note{margin-top:14px;font-size:14px;color:var(--ink-2)}
+/* 견적 문의 */
+.cwrap{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.6fr);gap:clamp(28px,4vw,56px);
+  align-items:start;margin-top:48px}
+.form{min-width:0}
+.cside{background:var(--bg-2);border:1px solid var(--line);border-radius:6px;padding:30px 28px;position:sticky;top:100px}
+.cside .lb{font-size:14px;font-weight:700;color:var(--blue)}
+.cside .ph{display:block;margin-top:10px;font-size:clamp(24px,2.6vw,29px);font-weight:800;letter-spacing:-.045em;
+  color:var(--navy);line-height:1.25}
+.cside .ph:hover{color:var(--blue)}
+.cside dl{margin-top:22px;padding-top:20px;border-top:1px solid var(--line)}
+.cside dl div{display:flex;gap:12px;padding:7px 0;font-size:15.5px;line-height:1.6}
+.cside dt{flex:none;width:62px;color:var(--ink-2);font-weight:600}
+.cside dd{color:var(--ink);font-weight:600}
+.cside .btn{width:100%;margin-top:22px}
+@media(max-width:900px){
+  .cwrap{grid-template-columns:1fr;gap:22px}
+  .cside{position:static;order:-1;padding:24px 22px}
+}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.fg .full{grid-column:1/-1}
+.fg label{display:block;font-size:15px;font-weight:700;margin-bottom:9px}
+.fg label u{text-decoration:none;color:var(--spot);margin-left:2px}
+.fg input,.fg select,.fg textarea{width:100%;background:#fff;border:1px solid var(--line);border-radius:5px;
+  padding:15px 16px;font-size:17px;min-height:56px;caret-color:var(--blue);transition:border-color .16s,box-shadow .16s}
+.fg input:hover,.fg select:hover,.fg textarea:hover{border-color:#BFD3E6}
+.fg input:focus,.fg select:focus,.fg textarea:focus{outline:0;border-color:var(--blue);box-shadow:0 0 0 3px rgba(30,122,203,.16)}
+.fg input::placeholder,.fg textarea::placeholder{color:var(--ink-3)}
+.fg textarea{resize:vertical;min-height:132px;line-height:1.7}
+.fg select{appearance:none;cursor:pointer;background-image:
+  linear-gradient(45deg,transparent 50%,var(--ink-2) 50%),linear-gradient(135deg,var(--ink-2) 50%,transparent 50%);
+  background-position:calc(100% - 19px) 25px,calc(100% - 14px) 25px;background-size:5px 5px;background-repeat:no-repeat}
+.fg .bad input,.fg .bad textarea{border-color:var(--spot)}
+.err{display:none;margin-top:8px;font-size:14.5px;font-weight:600;color:var(--spot);align-items:center;gap:6px}
+.err svg{width:15px;height:15px;flex:none}
+.bad .err{display:flex}
+.agree{display:flex;gap:12px;align-items:flex-start;background:var(--bg-2);border:1px solid var(--line);
+  border-radius:6px;padding:20px 22px}
+.agree .cb{position:relative;flex:none;width:44px;height:44px;margin:-10px 0 0 -11px;display:flex;
+  align-items:center;justify-content:center;cursor:pointer}
+.agree input{width:22px;height:22px;accent-color:var(--blue);cursor:pointer}
+.agree p{font-size:15.5px;color:var(--ink-2);line-height:1.66}
+.agree label{font-weight:700;color:var(--ink);font-size:16.5px;display:inline;margin:0}
+.agree a{color:var(--blue);border-bottom:1px solid rgba(30,122,203,.4)}
+.agree a:hover{border-color:var(--blue)}
+.agree.bad{border-color:var(--spot);background:#FDF4F3}
+.sendrow .btn{width:100%;min-height:62px;font-size:18px}
+.sent{display:none;align-items:flex-start;gap:11px;background:#EEF6EF;border:1px solid #BFDCC2;border-radius:6px;
+  padding:18px 20px;font-size:16.5px;font-weight:600;color:#1E5B2A}
+.sent svg{width:20px;height:20px;flex:none;margin-top:2px}
+.note{font-size:14.5px;color:var(--ink-3);line-height:1.62}
+@media(max-width:640px){.fg{grid-template-columns:1fr;gap:16px}}
 
 /* 하단 */
-footer{background:var(--navy);color:#9FB0C4;padding:48px 0 108px;font-size:14px;line-height:1.85}
-footer b{color:#fff;font-size:20px;letter-spacing:.01em}
-.fl{display:flex;flex-wrap:wrap;gap:6px 20px;margin-top:16px}
-.fl span{white-space:nowrap}
-.credit{margin-top:26px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);
-  font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:#6C7E93}
-@media(min-width:901px){footer{padding-bottom:48px}}
+footer{background:var(--navy);color:var(--on-navy-2);padding:62px 0 110px;font-size:15px}
+.f-top{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;align-items:flex-start;
+  padding-bottom:26px;border-bottom:1px solid rgba(255,255,255,.14)}
+.f-logo b{font-size:24px;font-weight:900;color:#fff;letter-spacing:-.02em}
+.f-logo span{font-size:13px;margin-left:8px;color:var(--on-navy-2);font-weight:600;letter-spacing:.06em}
+.f-contact{display:flex;gap:10px;flex-wrap:wrap}
+.f-rec{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px 40px;margin-top:26px}
+.f-rec div{display:flex;gap:12px;line-height:1.6}
+.f-rec dt{color:#93A7BF;flex:none;width:92px;font-weight:500}
+.f-rec dd{color:var(--on-navy)}
+.credit{margin-top:30px;font-size:13.5px;color:#93A7BF}
+@media(max-width:820px){.f-rec{grid-template-columns:1fr}footer{padding-bottom:130px}}
 
 /* 모바일 하단 바 */
 .bar{position:fixed;left:0;right:0;bottom:0;z-index:80;display:none;background:#fff;
-  border-top:1px solid var(--line);padding:9px 12px calc(9px + env(safe-area-inset-bottom));
-  gap:9px;box-shadow:0 -6px 20px rgba(14,36,64,.1)}
-.bar a{flex:1;text-align:center;padding:14px 6px;border-radius:6px;font-weight:800;font-size:15px}
-.bar .c{background:var(--navy);color:#fff;flex:1.5}
-.bar .m{background:var(--bg-2);color:var(--navy)}
-@media(max-width:900px){.bar{display:flex}}
+  border-top:1px solid var(--line);box-shadow:0 -2px 14px rgba(14,36,64,.09);padding-bottom:env(safe-area-inset-bottom)}
+.bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:7px;min-height:60px;
+  font-weight:700;font-size:15.5px;color:var(--navy)}
+.bar a svg{width:17px;height:17px}
+.bar .m{border-right:1px solid var(--line-2)}
+.bar .c{background:var(--blue);color:#fff;flex:1.25}
+@media(max-width:980px){.bar{display:flex}}
 
-/* 모달 */
-.modal{position:fixed;inset:0;background:rgba(14,36,64,.6);z-index:100;display:none;
+/* 개인정보 처리방침 */
+.modal{position:fixed;inset:0;z-index:100;background:rgba(10,27,49,.6);display:none;
   align-items:center;justify-content:center;padding:20px}
 .modal.open{display:flex}
-.modal .box{background:#fff;border-radius:8px;max-width:560px;width:100%;max-height:80vh;overflow:auto;padding:28px}
-.modal h3{font-size:21px;font-weight:800;margin-bottom:14px;color:var(--navy)}
-.modal p{font-size:14.5px;color:var(--ink-2);margin-bottom:11px}
-.modal button{margin-top:16px;width:100%;padding:14px;border:0;border-radius:6px;background:var(--navy);
-  color:#fff;font-weight:700;font-size:16px;cursor:pointer;font-family:inherit}
+.modal .box{background:#fff;border-radius:8px;max-width:560px;width:100%;max-height:84vh;overflow:auto;
+  padding:32px;box-shadow:var(--sh-2)}
+.modal h3{font-size:23px;margin-bottom:20px}
+.modal p{font-size:16px;color:var(--ink-2);margin-bottom:16px}
+.modal b{color:var(--ink);display:block;margin-bottom:3px;font-size:15.5px}
+.modal .btn{width:100%;margin-top:8px}
+
+/* 모션 */
+@media (prefers-reduced-motion:no-preference){
+  .rise{animation:rise .62s cubic-bezier(.16,1,.3,1) both}
+  .rise-1{animation-delay:.05s}.rise-2{animation-delay:.13s}.rise-3{animation-delay:.21s}.rise-4{animation-delay:.29s}
+  @keyframes rise{from{transform:translateY(10px);opacity:.001}to{transform:none;opacity:1}}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
 </style>
 
-<div class="demo" id="demo">
-  <b>시안 미리보기</b> · 실제 운영 중인 홈페이지가 아닙니다. 내용은 확정 전 임시입니다.
-  <button id="demoX" aria-label="닫기">&times;</button>
-</div>
+<div class="demo" id="demo"><div class="wrap">
+  <p><b>시안입니다</b> · 아직 공개 전인 미리보기 화면입니다. ● 표시는 확인이 필요한 항목입니다.</p>
+  <button id="demoX" aria-label="안내 닫기">닫기 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg></button>
+</div></div>
 
 <header>
-  <div class="wrap hd">
-    <a href="#top" class="logo"><b id="lg1"></b><span id="lg2"></span></a>
+  <div class="wrap"><div class="hd">
+    <a class="logo" href="#top"><b id="lg1"></b><span id="lg2"></span></a>
     <nav class="desk">
-      <a href="#about">회사소개</a><a href="#services">취급품목</a>
-      <a href="#process">진행절차</a><a href="#map">오시는길</a><a href="#contact">견적문의</a>
+      <a href="#services">취급 품목</a><a href="#about">회사 소개</a><a href="#process">진행 절차</a>
+      <a href="#map">오시는 길</a><a href="#contact">견적 문의</a>
     </nav>
-    <a class="hd-call" id="hdCall" href="#">전화 상담</a>
-    <button class="burger" id="burger" aria-label="메뉴 열기"><i></i><i></i><i></i></button>
-  </div>
+    <a class="hd-call" id="hdCall" href="#"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 14.1v2.3a1.5 1.5 0 01-1.7 1.5 15 15 0 01-6.5-2.3 14.7 14.7 0 01-4.5-4.5A15 15 0 012.5 4.5 1.5 1.5 0 014 2.8h2.3a1.5 1.5 0 011.5 1.3c.1.8.3 1.5.5 2.2a1.5 1.5 0 01-.3 1.6l-1 1a12 12 0 004.5 4.5l1-1a1.5 1.5 0 011.6-.3c.7.3 1.4.4 2.2.5a1.5 1.5 0 011.3 1.5z"/></svg><span id="hdCallT"></span></a>
+    <button class="burger" id="burger" aria-label="메뉴 열기" aria-expanded="false"><i></i><i></i><i></i></button>
+  </div></div>
 </header>
 
-<div class="drawer" id="drawer">
-  <button class="x" id="closeDrawer" aria-label="메뉴 닫기">&times;</button>
-  <a href="#about">회사소개</a><a href="#services">취급품목</a>
-  <a href="#process">진행절차</a><a href="#map">오시는길</a><a href="#contact">견적문의</a>
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="메뉴">
+  <div class="dh">
+    <a class="logo" href="#top"><b id="lg3"></b></a>
+    <button class="x" id="closeDrawer" aria-label="메뉴 닫기"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg></button>
+  </div>
+  <nav>
+    <a href="#services">취급 품목</a><a href="#about">회사 소개</a><a href="#process">진행 절차</a>
+    <a href="#map">오시는 길</a><a href="#contact">견적 문의</a>
+  </nav>
+  <div class="dcall"><a class="btn btn-p" id="dCall" href="#"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 14.1v2.3a1.5 1.5 0 01-1.7 1.5 15 15 0 01-6.5-2.3 14.7 14.7 0 01-4.5-4.5A15 15 0 012.5 4.5 1.5 1.5 0 014 2.8h2.3a1.5 1.5 0 011.5 1.3c.1.8.3 1.5.5 2.2a1.5 1.5 0 01-.3 1.6l-1 1a12 12 0 004.5 4.5l1-1a1.5 1.5 0 011.6-.3c.7.3 1.4.4 2.2.5a1.5 1.5 0 011.3 1.5z"/></svg><span id="dCallT"></span></a></div>
 </div>
 
-<main id="top">
-
-  <section class="hero">
+<main>
+  <section class="hero" id="top">
+    <svg class="bgart" viewBox="0 0 300 220" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <g id="bgw"></g>
+    </svg>
     <div class="wrap">
-      <div class="eyebrow" id="hEyebrow"></div>
-      <h1 id="hTitle"></h1>
-      <p class="lead" id="hSub"></p>
-      <div class="hero-cta">
-        <a class="btn btn-1" id="hCall" href="#">전화로 견적 문의</a>
-        <a class="btn btn-2" href="#services">취급 품목 보기</a>
+      <h1 class="rise rise-1" id="hTitle"></h1>
+      <p class="sub rise rise-2" id="hSub"></p>
+      <div class="cta rise rise-3">
+        <a class="btn btn-p" id="hCall" href="#"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 14.1v2.3a1.5 1.5 0 01-1.7 1.5 15 15 0 01-6.5-2.3 14.7 14.7 0 01-4.5-4.5A15 15 0 012.5 4.5 1.5 1.5 0 014 2.8h2.3a1.5 1.5 0 011.5 1.3c.1.8.3 1.5.5 2.2a1.5 1.5 0 01-.3 1.6l-1 1a12 12 0 004.5 4.5l1-1a1.5 1.5 0 011.6-.3c.7.3 1.4.4 2.2.5a1.5 1.5 0 011.3 1.5z"/></svg><span id="hCallT"></span></a>
+        <a class="btn btn-g" href="#contact">견적 문의하기</a>
       </div>
-      <div class="stats" id="hStats"></div>
+      <div class="stats rise rise-4" id="hStats"></div>
     </div>
   </section>
 
-  <section id="about">
+  <section id="services">
     <div class="wrap">
-      <div class="eyebrow">About</div>
-      <h2 class="sec-t" id="aTitle"></h2>
-      <div class="about-grid">
-        <div id="aBody"></div>
-        <div class="points" id="aPoints"></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="services" class="gray">
-    <div class="wrap">
-      <div class="eyebrow">Products</div>
-      <h2 class="sec-t" id="sTitle"></h2>
-      <p class="sec-lead" id="sLead"></p>
+      <div class="s-head"><h2 id="sTitle"></h2><p id="sLead"></p></div>
       <div class="svc" id="sList"></div>
+      <a class="more" id="sBlog" href="#" target="_blank" rel="noopener">실제 작업 사진은 네이버 블로그에서 보실 수 있습니다 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+    </div>
+  </section>
+
+  <section id="about" class="tinted">
+    <div class="wrap">
+      <div class="ab">
+        <div>
+          <div class="s-head"><h2 id="aTitle"></h2></div>
+          <div class="ab-body" id="aBody" style="margin-top:20px"></div>
+        </div>
+        <div class="pts" id="aPoints"></div>
+      </div>
     </div>
   </section>
 
   <section id="process">
     <div class="wrap">
-      <div class="eyebrow">Process</div>
-      <h2 class="sec-t" id="pTitle"></h2>
-      <p class="sec-lead" id="pLead"></p>
+      <div class="s-head"><h2 id="pTitle"></h2><p id="pLead"></p></div>
       <div class="steps" id="pList"></div>
     </div>
   </section>
 
-  <section id="works" class="gray" style="display:none">
+  <section id="works" style="display:none">
     <div class="wrap">
-      <div class="eyebrow">Works</div>
-      <h2 class="sec-t" id="wTitle"></h2>
-      <p class="sec-lead" id="wLead"></p>
+      <div class="s-head"><h2 id="wTitle"></h2><p id="wLead"></p></div>
       <div class="works" id="wList"></div>
-      <a class="more" id="wMore" href="#" target="_blank" rel="noopener">블로그에서 더 보기 &rarr;</a>
+      <a class="more" id="wMore" href="#" target="_blank" rel="noopener">블로그에서 더 보기 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
     </div>
   </section>
 
-  <section id="map" class="gray">
+  <section id="map" class="tinted">
     <div class="wrap">
-      <div class="eyebrow">Location</div>
-      <h2 class="sec-t">오시는 길</h2>
-      <div class="map-grid">
-        <div class="map-box">
-          <div class="pin">📍</div>
-          <p id="mAddr"></p>
-          <small>네이버지도 삽입 자리</small>
-          <div class="map-links">
-            <a id="mNaver" href="#" target="_blank" rel="noopener">네이버지도</a>
-            <a id="mKakao" href="#" target="_blank" rel="noopener">카카오맵</a>
+      <div class="s-head"><h2>오시는 길</h2><p>인쇄물은 아래 주소로 보내주시면 됩니다. 방문 상담도 가능합니다.</p></div>
+      <div class="loc">
+        <div class="addr">
+          <div class="lb">공장 주소</div>
+          <div class="a" id="mAddr"></div>
+          <div class="links">
+            <a class="btn btn-o" id="mNaver" href="#" target="_blank" rel="noopener">네이버지도</a>
+            <a class="btn btn-o" id="mKakao" href="#" target="_blank" rel="noopener">카카오맵</a>
           </div>
         </div>
-        <table class="info-tbl"><tbody id="mInfo"></tbody></table>
+        <table class="tbl"><tbody id="mInfo"></tbody></table>
       </div>
     </div>
   </section>
 
   <section id="contact">
     <div class="wrap">
-      <div class="eyebrow">Contact</div>
-      <h2 class="sec-t">견적 문의</h2>
-      <p class="sec-lead" id="cLead"></p>
-      <div class="form-grid">
-        <div><label for="f1">이름 <span style="color:#C0392B">*</span></label><input id="f1" placeholder="홍길동"></div>
-        <div><label for="f2">연락처 <span style="color:#C0392B">*</span></label><input id="f2" type="tel" placeholder="010-0000-0000"></div>
-        <div class="full"><label for="f3">문의 유형</label><select id="f3"></select></div>
-        <div class="full"><label for="f4">제본 방식 · 수량 · 납기</label><textarea id="f4" placeholder="예) 트윈링 다이어리 3,000부 / 11월 20일까지"></textarea></div>
-        <div class="full agree">
-          <input type="checkbox" id="f5">
-          <p><label for="f5" style="display:inline;font-weight:700">개인정보 수집·이용에 동의합니다</label> (필수)<br>
-          문의 응대 목적으로 이름·연락처를 수집하며, 처리 후 3년간 보관합니다.
-          <a href="#" id="ppOpen">전문 보기</a></p>
+      <div class="s-head"><h2>견적 문의</h2><p id="cLead"></p></div>
+      <div class="cwrap">
+      <div class="form">
+        <div class="fg">
+          <div id="w1"><label for="f1">이름 <u>*</u></label><input id="f1" placeholder="홍길동" autocomplete="name">
+            <p class="err" id="e1" role="alert"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="8" cy="8" r="6.4"/><path d="M8 4.6v4.2M8 11.2v.6"/></svg>이름을 입력해 주세요.</p></div>
+          <div id="w2"><label for="f2">연락처 <u>*</u></label><input id="f2" type="tel" placeholder="010-0000-0000" autocomplete="tel" inputmode="tel">
+            <p class="err" id="e2" role="alert"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="8" cy="8" r="6.4"/><path d="M8 4.6v4.2M8 11.2v.6"/></svg>연락 받으실 번호를 입력해 주세요.</p></div>
+          <div class="full"><label for="f3">문의 유형</label><select id="f3"></select></div>
+          <div class="full" id="w4"><label for="f4">제본 방식 · 수량 · 납기</label>
+            <textarea id="f4" placeholder="예) 트윈링 다이어리 3,000부 / 11월 20일까지"></textarea></div>
+          <div class="full agree" id="w5">
+            <label class="cb" for="f5"><input type="checkbox" id="f5"></label>
+            <p><label for="f5">개인정보 수집·이용에 동의합니다</label> (필수)<br>
+            문의 응대 목적으로 이름·연락처를 수집하며, 처리 후 3년간 보관합니다.
+            <a href="#" id="ppOpen">전문 보기</a></p>
+            <p class="err" id="e5" role="alert" style="flex-basis:100%"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="8" cy="8" r="6.4"/><path d="M8 4.6v4.2M8 11.2v.6"/></svg>동의하셔야 문의를 보낼 수 있습니다.</p>
+          </div>
+          <div class="full sendrow"><button class="btn btn-p" id="send">견적 문의 보내기</button></div>
+          <div class="full sent" id="sentMsg" role="status"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 10.5l4 4 9-9"/></svg><span>접수되었습니다. 영업일 기준 1일 안에 연락드리겠습니다.</span></div>
+          <p class="note full">※ 시안 단계라 실제 전송은 되지 않습니다. 정식 오픈 시 담당자 메일과 구글시트로 바로 접수됩니다.</p>
         </div>
-        <div class="full"><button class="btn btn-1" id="send" style="width:100%">견적 문의 보내기</button></div>
-        <div class="full sent" id="sentMsg">접수되었습니다. 영업일 기준 1일 안에 연락드리겠습니다.</div>
-        <p class="note full">※ 시안 단계라 실제 전송은 되지 않습니다. 정식 오픈 시 담당자 메일과 구글시트로 바로 접수됩니다.</p>
+      </div>
+      <aside class="cside">
+        <div class="lb">전화가 가장 빠릅니다</div>
+        <a class="ph" id="cPhone" href="#"></a>
+        <dl>
+          <div><dt>영업시간</dt><dd id="cHours"></dd></div>
+          <div><dt>휴무</dt><dd id="cHoli"></dd></div>
+          <div><dt>공장</dt><dd id="cAddr"></dd></div>
+        </dl>
+        <a class="btn btn-p" id="cCall" href="#"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 14.1v2.3a1.5 1.5 0 01-1.7 1.5 15 15 0 01-6.5-2.3 14.7 14.7 0 01-4.5-4.5A15 15 0 012.5 4.5 1.5 1.5 0 014 2.8h2.3a1.5 1.5 0 011.5 1.3c.1.8.3 1.5.5 2.2a1.5 1.5 0 01-.3 1.6l-1 1a12 12 0 004.5 4.5l1-1a1.5 1.5 0 011.6-.3c.7.3 1.4.4 2.2.5a1.5 1.5 0 011.3 1.5z"/></svg>바로 전화 걸기</a>
+      </aside>
       </div>
     </div>
   </section>
@@ -448,27 +563,32 @@ footer b{color:#fff;font-size:20px;letter-spacing:.01em}
 
 <footer>
   <div class="wrap">
-    <b id="fName"></b>
-    <div class="fl" id="fInfo"></div>
+    <div class="f-top">
+      <div class="f-logo"><b id="fName"></b><span id="fNameKo"></span></div>
+      <div class="f-contact">
+        <a class="btn btn-g" id="fCall" href="#" style="min-height:48px;padding:0 22px;font-size:16px"><span id="fCallT"></span></a>
+      </div>
+    </div>
+    <dl class="f-rec" id="fInfo"></dl>
     <div class="credit">이 페이지는 원밀(ONEMILL)에서 제작한 시안입니다.</div>
   </div>
 </footer>
 
 <div class="bar">
-  <a class="m" href="#map">오시는길</a>
-  <a class="m" href="#contact">견적문의</a>
-  <a class="c" id="barCall" href="#">전화 걸기</a>
+  <a class="m" href="#map">오시는 길</a>
+  <a class="m" href="#contact">견적 문의</a>
+  <a class="c" id="barCall" href="#"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 14.1v2.3a1.5 1.5 0 01-1.7 1.5 15 15 0 01-6.5-2.3 14.7 14.7 0 01-4.5-4.5A15 15 0 012.5 4.5 1.5 1.5 0 014 2.8h2.3a1.5 1.5 0 011.5 1.3c.1.8.3 1.5.5 2.2a1.5 1.5 0 01-.3 1.6l-1 1a12 12 0 004.5 4.5l1-1a1.5 1.5 0 011.6-.3c.7.3 1.4.4 2.2.5a1.5 1.5 0 011.3 1.5z"/></svg>전화 걸기</a>
 </div>
 
-<div class="modal" id="pp">
+<div class="modal" id="pp" role="dialog" aria-modal="true" aria-labelledby="ppT">
   <div class="box">
-    <h3>개인정보 처리방침</h3>
-    <p><b>1. 수집 항목</b><br>이름, 연락처, 문의 내용</p>
-    <p><b>2. 수집 목적</b><br>문의 접수 및 상담 응대, 견적 안내</p>
-    <p><b>3. 보유 기간</b><br>수집일로부터 3년 (또는 삭제 요청 시 즉시 파기)</p>
-    <p><b>4. 동의 거부 권리</b><br>동의를 거부하실 수 있으며, 이 경우 온라인 문의 접수가 제한됩니다. 전화로는 언제든 상담 가능합니다.</p>
-    <p><b>5. 제3자 제공</b><br>수집한 정보를 제3자에게 제공하지 않습니다.</p>
-    <button id="ppClose">닫기</button>
+    <h3 id="ppT">개인정보 처리방침</h3>
+    <p><b>1. 수집 항목</b>이름, 연락처, 문의 내용</p>
+    <p><b>2. 수집 목적</b>문의 접수 및 상담 응대, 견적 안내</p>
+    <p><b>3. 보유 기간</b>수집일로부터 3년 (또는 삭제 요청 시 즉시 파기)</p>
+    <p><b>4. 동의 거부 권리</b>동의를 거부하실 수 있으며, 이 경우 온라인 문의 접수가 제한됩니다. 전화로는 언제든 상담 가능합니다.</p>
+    <p><b>5. 제3자 제공</b>수집한 정보를 제3자에게 제공하지 않습니다.</p>
+    <button class="btn btn-o" id="ppClose">닫기</button>
   </div>
 </div>
 
@@ -478,89 +598,180 @@ footer b{color:#fff;font-size:20px;letter-spacing:.01em}
   const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
   const tel = 'tel:' + SITE.phone.replace(/[^0-9+]/g,'');
 
-  document.title = SITE.brand + ' — ' + SITE.tagline;
-  $('lg1').textContent = SITE.brand;
-  $('lg2').textContent = SITE.brandEn;
-  ['hdCall','hCall','barCall'].forEach(i => $(i).href = tel);
+  /* 제본 방식 단면 도해 — 사진 대신 쓰는 자체 제작 선화 */
+  const A = 'fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"';
+  const loops = (x,y0,n,gap,r) => Array.from({length:n},(_,i)=>`<circle cx="${x}" cy="${y0+i*gap}" r="${r}" ${A}/>`).join('');
+  const sh = (x1,x2,y0,n,gap) => Array.from({length:n},(_,i)=>`<line x1="${x1}" y1="${y0+i*gap}" x2="${x2}" y2="${y0+i*gap}" ${A}/>`).join('');
+  const DIA = [
+    `<svg viewBox="0 0 132 96" aria-hidden="true">${sh(70,124,18,6,12)}${sh(8,62,18,6,12)}${loops(66,18,6,12,5.5)}<path d="M124 12 q10 36 0 72" ${A} stroke-dasharray="3 4"/></svg>`,
+    `<svg viewBox="0 0 132 96" aria-hidden="true"><rect x="30" y="10" width="94" height="76" ${A}/>${loops(30,20,6,12,5.5)}${sh(52,112,32,4,14)}</svg>`,
+    `<svg viewBox="0 0 132 96" aria-hidden="true"><path d="M22 84 L66 16 L110 84 Z" ${A}/><line x1="22" y1="84" x2="110" y2="84" ${A}/>${loops(66,12,1,0,6)}<line x1="44" y1="58" x2="88" y2="58" ${A}/></svg>`,
+    `<svg viewBox="0 0 132 96" aria-hidden="true"><path d="M34 8 h90 M34 88 h90" ${A}/><rect x="24" y="8" width="10" height="80" ${A}/>${sh(38,120,18,6,12)}<path d="M24 8 q-8 40 0 80" ${A}/></svg>`,
+    `<svg viewBox="0 0 132 96" aria-hidden="true">${loops(34,22,3,26,13)}${sh(52,124,14,7,11)}</svg>`,
+    `<svg viewBox="0 0 132 96" aria-hidden="true"><path d="M28 10 h72 l24 24 v52 H28 Z" ${A}/><path d="M100 10 v24 h24" ${A}/>${sh(42,110,50,3,12)}</svg>`
+  ];
+  const CHECK = '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2.2l6.4 2.5v4.9c0 3.8-2.7 6.6-6.4 8-3.7-1.4-6.4-4.2-6.4-8V4.7z"/><path d="M7.4 9.9l1.9 1.9 3.4-3.6"/></svg>';
 
-  $('hEyebrow').textContent = SITE.hero.eyebrow;
-  $('hTitle').innerHTML = esc(SITE.hero.line1) + '<span>' + esc(SITE.hero.line2) + '</span>';
+  /* 히어로 배경 선화 — 트윈링 단면 */
+  $('bgw').innerHTML = Array.from({length:9},(_,i)=>{
+    const y = 14 + i*24;
+    return `<circle cx="150" cy="${y}" r="11"/><line x1="166" y1="${y}" x2="292" y2="${y}"/><line x1="134" y1="${y}" x2="8" y2="${y}"/>`;
+  }).join('');
+
+  document.title = SITE.brand + ' — ' + SITE.tagline;
+  ['lg1','lg3','fName'].forEach(i => $(i).textContent = SITE.brand);
+  ['lg2','fNameKo'].forEach(i => $(i).textContent = SITE.brandKo);
+  ['hdCall','hCall','barCall','dCall','fCall','cPhone','cCall'].forEach(i => $(i).href = tel);
+  $('cPhone').textContent = SITE.phoneLabel;
+  $('cHours').textContent = SITE.hours;
+  $('cHoli').textContent = SITE.holiday;
+  $('cAddr').textContent = SITE.address;
+  ['hdCallT','dCallT'].forEach(i => $(i).textContent = SITE.phoneLabel);
+  $('hCallT').textContent = SITE.phoneLabel + ' 전화';
+  $('fCallT').textContent = SITE.phoneLabel;
+
+  /* 첫 화면 */
+  $('hTitle').textContent = SITE.hero.title;
   $('hSub').textContent = SITE.hero.sub;
   $('hStats').innerHTML = SITE.hero.stats.map(s =>
-    `<div><b>${esc(s.n)}<i>${esc(s.unit)}</i></b><span>${esc(s.label)}</span></div>`).join('');
+    `<div><b class="${/^[0-9]/.test(s.n)?'':'word'}">${esc(s.n)}<i>${esc(s.unit)}</i></b><span>${esc(s.label)}</span></div>`).join('');
 
-  $('aTitle').textContent = SITE.about.title;
-  $('aBody').innerHTML = SITE.about.body.map(p => `<p>${esc(p)}</p>`).join('');
-  $('aPoints').innerHTML = SITE.about.points.map(p =>
-    `<div><em>${esc(p.n)}</em><b>${esc(p.k)}</b><span>${esc(p.v)}</span></div>`).join('');
-
+  /* 취급 품목 */
   $('sTitle').textContent = SITE.services.title;
   $('sLead').textContent = SITE.services.lead;
   $('sList').innerHTML = SITE.services.items.map((s,i) =>
-    `<article><div class="no">${String(i+1).padStart(2,'0')}</div>
-     <h3>${esc(s.name)}</h3><p>${esc(s.desc)}</p></article>`).join('');
+    `<article><div class="dia">${DIA[i % DIA.length]}</div><h3>${esc(s.name)}</h3><p>${esc(s.desc)}</p></article>`).join('');
+  $('sBlog').href = SITE.works.blogUrl;
 
+  /* 회사 소개 */
+  $('aTitle').textContent = SITE.about.title;
+  $('aBody').innerHTML = SITE.about.body.map(p => `<p>${esc(p)}</p>`).join('');
+  $('aPoints').innerHTML = SITE.about.points.map(p =>
+    `<div><b>${CHECK}${esc(p.k)}</b><span>${esc(p.v)}</span></div>`).join('');
+
+  /* 진행 절차 */
   $('pTitle').textContent = SITE.process.title;
   $('pLead').textContent = SITE.process.lead;
   $('pList').innerHTML = SITE.process.steps.map((s,i) =>
-    `<div class="stp"><div class="n">${String(i+1).padStart(2,'0')}</div>
-     <b>${esc(s.k)}</b><span>${esc(s.v)}</span></div>`).join('');
+    `<div class="st"><div class="n">${i+1}</div><b>${esc(s.k)}</b><span>${esc(s.v)}</span></div>`).join('');
 
-  if (SITE.showPhotos) {
+  /* 작업 사례 — 실제 사진이 들어 있을 때만 구역이 나타납니다 */
+  const shots = SITE.works.items.filter(w => w.img);
+  if (SITE.showPhotos && shots.length) {
     $('works').style.display = '';
     $('wTitle').textContent = SITE.works.title;
     $('wLead').textContent = SITE.works.lead;
     $('wMore').href = SITE.works.blogUrl;
-    $('wList').innerHTML = SITE.works.items.map(w =>
-      `<figure>${ w.img ? `<img src="${esc(w.img)}" alt="${esc(w.cap)}" loading="lazy">`
-                        : `<div class="ph">PHOTO</div>` }
+    $('wList').innerHTML = shots.map(w =>
+      `<figure><img src="${esc(w.img)}" alt="${esc(w.cap)}" loading="lazy">
        <figcaption><b>${esc(w.cap)}</b><span>${esc(w.meta)}</span></figcaption></figure>`).join('');
   }
 
+  /* 오시는 길 */
   $('mAddr').textContent = SITE.address;
   $('mNaver').href = SITE.map.naverUrl;
   $('mKakao').href = SITE.map.kakaoUrl;
   $('mInfo').innerHTML = [...SITE.map.guide,
     {k:'영업시간', v: SITE.hours + ' · ' + SITE.holiday},
     {k:'전화', v: SITE.phoneLabel}
-  ].map(r => `<tr><th>${esc(r.k)}</th><td>${esc(r.v)}</td></tr>`).join('');
+  ].map(r => `<tr><th scope="row">${esc(r.k)}</th><td>${esc(r.v)}</td></tr>`).join('');
 
+  /* 견적 문의 */
   $('cLead').textContent = SITE.contact.lead;
   $('f3').innerHTML = SITE.contact.subjects.map(s => `<option>${esc(s)}</option>`).join('');
 
-  $('fName').textContent = SITE.legal.company;
-  $('fInfo').innerHTML = [['대표',SITE.legal.ceo],['사업자등록번호',SITE.legal.bizNo],
-    ['주소',SITE.legal.addr],['전화',SITE.legal.tel],['이메일',SITE.legal.email]]
-    .map(([k,v]) => `<span>${esc(k)} ${esc(v)}</span>`).join('');
+  /* 하단 */
+  $('fInfo').innerHTML = [['상호',SITE.legal.company],['대표',SITE.legal.ceo],
+    ['사업자등록번호',SITE.legal.bizNo],['주소',SITE.legal.addr],['전화',SITE.legal.tel],['이메일',SITE.legal.email]]
+    .map(([k,v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('');
 
+  /* ── 동작 ────────────────────────────────────────── */
   const dm = $('demo');
   if (dm) $('demoX').onclick = () => dm.classList.add('hide');
 
-  const dr = $('drawer');
-  $('burger').onclick = () => dr.classList.add('open');
-  $('closeDrawer').onclick = () => dr.classList.remove('open');
-  dr.querySelectorAll('a').forEach(a => a.onclick = () => dr.classList.remove('open'));
+  /* 포커스 가둠 */
+  const focusables = el => [...el.querySelectorAll('a[href],button:not([disabled]),input,select,textarea')]
+    .filter(n => n.offsetParent !== null);
+  let lastFocus = null;
+  function openLayer(el, first){
+    lastFocus = document.activeElement;
+    el.classList.add('open');
+    (first || focusables(el)[0])?.focus();
+  }
+  function closeLayer(el){ el.classList.remove('open'); lastFocus?.focus(); }
+  function trap(el, e){
+    if (e.key !== 'Tab') return;
+    const f = focusables(el); if (!f.length) return;
+    const a = f[0], z = f[f.length-1];
+    if (e.shiftKey && document.activeElement === a){ e.preventDefault(); z.focus(); }
+    else if (!e.shiftKey && document.activeElement === z){ e.preventDefault(); a.focus(); }
+  }
 
-  $('ppOpen').onclick = e => { e.preventDefault(); $('pp').classList.add('open'); };
-  $('ppClose').onclick = () => $('pp').classList.remove('open');
-  $('pp').onclick = e => { if (e.target.id==='pp') $('pp').classList.remove('open'); };
+  const dr = $('drawer'), bg = $('burger');
+  bg.onclick = () => { openLayer(dr); bg.setAttribute('aria-expanded','true'); };
+  const shutDrawer = () => { closeLayer(dr); bg.setAttribute('aria-expanded','false'); };
+  $('closeDrawer').onclick = shutDrawer;
+  dr.querySelectorAll('nav a, .dcall a').forEach(a => a.addEventListener('click', shutDrawer));
+
+  const pp = $('pp');
+  $('ppOpen').onclick = e => { e.preventDefault(); openLayer(pp, $('ppClose')); };
+  $('ppClose').onclick = () => closeLayer(pp);
+  pp.onclick = e => { if (e.target === pp) closeLayer(pp); };
+
   document.addEventListener('keydown', e => {
-    if (e.key==='Escape'){ $('pp').classList.remove('open'); dr.classList.remove('open'); }
+    if (e.key === 'Escape'){ if (pp.classList.contains('open')) closeLayer(pp); if (dr.classList.contains('open')) shutDrawer(); }
+    if (pp.classList.contains('open')) trap(pp, e);
+    else if (dr.classList.contains('open')) trap(dr, e);
   });
 
+  /* 폼 검증 — 문제가 난 칸에 직접 표시합니다 */
+  const FIELD = { w1:['f1','e1'], w2:['f2','e2'], w5:['f5','e5'] };
+  const mark = (wrap, on) => {
+    $(wrap).classList.toggle('bad', on);
+    const [fid, eid] = FIELD[wrap];
+    $(fid).setAttribute('aria-invalid', on ? 'true' : 'false');
+    if (on) $(fid).setAttribute('aria-describedby', eid); else $(fid).removeAttribute('aria-describedby');
+  };
+  ['f1','f2'].forEach((f,i) => $(f).addEventListener('input', () => mark('w'+(i+1), false)));
+  $('f5').addEventListener('change', () => mark('w5', false));
+
   $('send').onclick = () => {
-    if(!$('f1').value.trim() || !$('f2').value.trim()){ alert('이름과 연락처를 입력해 주세요.'); return; }
-    if(!$('f5').checked){ alert('개인정보 수집·이용에 동의해 주세요.'); return; }
-    $('sentMsg').style.display='block';
-    $('send').textContent='접수 완료'; $('send').disabled=true;
+    const bad1 = !$('f1').value.trim(), bad2 = !$('f2').value.trim(), bad5 = !$('f5').checked;
+    mark('w1', bad1); mark('w2', bad2); mark('w5', bad5);
+    const first = bad1 ? 'f1' : bad2 ? 'f2' : bad5 ? 'f5' : null;
+    if (first){ $(first).focus(); $(first).scrollIntoView({block:'center',behavior:'smooth'}); return; }
+    $('sentMsg').style.display = 'flex';
+    $('send').textContent = '접수 완료'; $('send').disabled = true;
+    $('sentMsg').scrollIntoView({block:'center',behavior:'smooth'});
   };
 
+  /* 현재 구역 표시 — 상단 고정 바 바로 아래를 지난 마지막 구역이 현재 구역 */
   const links = [...document.querySelectorAll('nav.desk a')];
-  const obs = new IntersectionObserver(es => es.forEach(e => {
-    if(e.isIntersecting) links.forEach(a =>
-      a.classList.toggle('on', a.getAttribute('href')==='#'+e.target.id));
-  }), { rootMargin:'-45% 0px -50% 0px' });
-  ['about','services','process','map','contact'].forEach(id => obs.observe($(id)));
+  const ids = ['services','about','process','map','contact'];
+  const LINE = 100;   // 고정 바(74px) 바로 아래 기준선
+
+  function syncNav(){
+    const doc = document.documentElement;
+    let cur = null;
+    for (const id of ids){
+      const el = $(id);
+      if (el.offsetParent !== null && el.getBoundingClientRect().top <= LINE) cur = id;
+    }
+    // 페이지 끝까지 내렸으면 마지막 구역을 현재로 본다
+    if (window.innerHeight + window.scrollY >= doc.scrollHeight - 2) cur = ids[ids.length - 1];
+    links.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + cur));
+  }
+
+  let ticking = false;
+  const onScroll = () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => { syncNav(); ticking = false; });
+  };
+  window.addEventListener('scroll', onScroll, { passive:true });
+  window.addEventListener('resize', onScroll);
+  window.addEventListener('hashchange', onScroll);
+  syncNav();
 })();
 </script>
 </body>
